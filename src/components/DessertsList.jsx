@@ -1,4 +1,4 @@
-export default function DessertsList({ titleText, desserts, selectDessert }) {
+export default function DessertsList({ titleText, desserts, onDessertClick }) {
   return (
     <section className="p-6 mb-6">
       <h3 className="mb-6">{titleText}</h3>
@@ -8,7 +8,7 @@ export default function DessertsList({ titleText, desserts, selectDessert }) {
           <li
             key={dessert.id}
             className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4 box-border"
-            onClick={() => selectDessert(dessert.id)}
+            onClick={() => onDessertClick(dessert.id)}
           >
             <div className="relative rounded-xl overflow-hidden bg-[#1b2033] transition-transform duration-300 ease-in-out hover:rotate-[10deg] hover:shadow-[0_0_20px_5px_rgba(255,255,100,0.6)] cursor-pointer">
               <img

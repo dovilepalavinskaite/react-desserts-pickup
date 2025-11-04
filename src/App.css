@@ -13,9 +13,29 @@ h3 {
   color: #fb7185;
   font-size: 1.5rem; 
 }
-
 .lean-effect:hover img {
   transform: rotate(10deg);
   cursor: pointer;
   box-shadow: 0 0 20px 5px rgba(255, 255, 100, 0.6);
 }
+
+.modal::backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-buttons button {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.modal-buttons button:hover {
+  filter: brightness(0.9);
+} 
